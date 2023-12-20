@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom right, rgb(255, 255, 255), rgb(219, 224, 225));
+}
+.app-title {
+  color: red;
+}
+
+.yellow {
+  color: yellowgreen;
+}
+
+.blue {
+  color: blue;
+}
+
+.container-center {
+  position: relative;
+  margin: auto;
+  width: fit-content;
+}
