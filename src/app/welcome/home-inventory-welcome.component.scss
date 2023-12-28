@@ -1,0 +1,15 @@
+.center-align {
+  position:absolute;
+  top: calc(50% - 250px);
+}
+
+.welcome-grid-card {
+  display:grid; width: 500px;grid-template-columns: 50% 50%; gap: 1rem;
+}
+
+
+@media (max-width: 600px) {
+  .welcome-grid-card {
+    display:grid; grid-template-columns: 100%; gap: 1rem;
+  }
+}

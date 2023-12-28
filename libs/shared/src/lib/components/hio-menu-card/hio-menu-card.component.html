@@ -1,0 +1,17 @@
+<mat-card class="hio-menu-card">
+  <mat-card-header>
+    <mat-card-title>
+      <div>
+        <mat-icon 
+          *ngIf="icon" 
+          color="primary">{{icon}}
+        </mat-icon>&nbsp;<span class="title">{{title}}</span>
+      </div>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div>
+      {{text}}
+    </div>
+  </mat-card-content>
+</mat-card>

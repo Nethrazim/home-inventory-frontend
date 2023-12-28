@@ -1,0 +1,24 @@
+.hio-menu-card {
+  width: 100%;
+  min-height: 200px;
+
+  mat-icon {
+    line-height: unset !important;
+    color: rgb(85,152,255);
+  }
+
+  .title {
+    //text-decoration: underline;
+  }
+}
+
+.hio-menu-card mat-card-header {
+  background-color: rgb(255, 255, 255);
+  color:black;
+}
+
+@media (max-width: 600px) {
+  .hio-menu-card {
+    width:335px;
+  }
+}

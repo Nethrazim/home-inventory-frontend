@@ -1,3 +1,48 @@
 <hio-navbar></hio-navbar>
-<hio-card></hio-card>
-<a [routerLink]="['/shared']">Shared</a>
+<div class="container-fluid center-align">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <div class="welcome-grid-card">
+        <hio-menu-card
+          [title]="'Notifications'"
+          [icon]="'notifications'"
+          [text]="'Schedule notifications when reaching a stock limit to any asset.Or receive realtime notifications from your partner.'">
+        </hio-menu-card>
+
+        <hio-menu-card
+          [title]="'Wish List'"
+          [icon]="'list'"
+          [text]="'Manage your future shoppings by keeping an easily accesible wish list.'">
+        </hio-menu-card>
+
+        <hio-menu-card
+          [title]="'Home Stock'"
+          [icon]="'home'"
+          [text]="'Manage your home stock through a user friendly interface'">
+        </hio-menu-card>
+
+        <hio-menu-card
+          [title]="'Print'"
+          [icon]="'print'"
+          [text]="'Print your wishlist or create a custom print list.'">
+        </hio-menu-card>
+      </div>
+    </div>
+    <div class="col-12 col-md-6">
+      <div style="position:relative; top: calc(50% - 100px);display:grid; grid-template-columns: 100%; gap:20px;">
+        <div style="display:flex; justify-content: center;">
+          <button mat-stroked-button color="#5598FF" routerLink="/identity/login">LOGIN</button>&nbsp;&nbsp;<span style="display:block;position:relative;top:4px;">or</span>&nbsp;&nbsp;
+          <button mat-raised-button color="primary">REGISTER ACCOUNT</button>
+        </div>
+        <div style="display:flex; justify-content: center;">  
+          <span>
+            Use HomeInside-Out web application to manage your personal belongings.<br/>
+            Register your account and hold your information encrypted even from us.
+          </span>
+        </div>
+        <div style="display:flex; justify-content: center;">
+          <img src="../../assets/images/chart-logo.png" width="70%" height="70%">
+        </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+.login-wrapper {
+  width: 400px;
+  height: 300px;
+  background-color: #fefefe;
+  box-shadow: 5px 5px 5px 0px gray;
+  $login-comp-width : 200px;
+  * {
+    margin-bottom: 10px;
+    display:block;
+    width: $login-comp-width;
+  }
+
+  input {
+    line-height: 2rem;
+  }
+
+  button {
+    height: 2rem;
+  }
+
+  a span{
+    float:right;
+  }
+
+  >div {
+    top:30px;
+    position:relative;
+    margin: auto;
+  }
+}

@@ -1,15 +1,21 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { MaterialModule } from '@home-inventory-fe/material';
 import { HioCardComponent } from './components/hio-card/hio-card.component';
-import { RouterModule } from '@angular/router';
-import { sharedRoutes } from './shared.routes';
+import { HioMenuCardComponent } from './components/hio-menu-card/hio-menu-card.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   imports: [
-    RouterModule.forChild(sharedRoutes),
-    CommonModule
+    CommonModule,
+    MaterialModule,
   ],
-  declarations: [HioCardComponent],
-  exports: [HioCardComponent]
+  declarations: [
+    HioCardComponent,
+    HioMenuCardComponent],
+  exports: [
+    MaterialModule,
+    HioCardComponent, 
+    HioMenuCardComponent
+  ]
 })
 export class SharedModule {}

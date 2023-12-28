@@ -8,18 +8,20 @@ import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 import { SharedModule } from '@home-inventory-fe/shared';
+import { appRoutes } from './app.routes';
 
 @NgModule({
   declarations: [
     AppComponent, 
     HomePageComponent,
     NavbarComponent,
-    LoginComponent],
+    LoginComponent
+  ],
   imports: [
     BrowserModule, 
     CommonModule,
-    RouterModule.forRoot([]),
-    SharedModule
+    RouterModule.forRoot(appRoutes),
+    SharedModule,
   ],
   bootstrap: [AppComponent]
 })
