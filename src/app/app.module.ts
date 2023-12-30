@@ -4,8 +4,6 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { HomePageComponent } from './welcome/home-inventory-welcome.component';
-import { LoginComponent } from './login/login.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
 import { SharedModule } from '@home-inventory-fe/shared';
 import { appRoutes } from './app.routes';
@@ -14,8 +12,6 @@ import { appRoutes } from './app.routes';
   declarations: [
     AppComponent, 
     HomePageComponent,
-    NavbarComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule, 

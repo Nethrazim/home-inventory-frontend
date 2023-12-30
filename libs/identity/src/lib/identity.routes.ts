@@ -1,8 +1,8 @@
 import { Route } from '@angular/router';
-import { LoginComponent } from './components/login/login.component';
+import { LoginWrapperComponent } from './components/login-wrapper/login-wrapper.component';
 
 export const identityRoutes: Route[] = [
   {
-    path: 'login', component: LoginComponent
+    path: 'login', component: LoginWrapperComponent
   },
 ];
