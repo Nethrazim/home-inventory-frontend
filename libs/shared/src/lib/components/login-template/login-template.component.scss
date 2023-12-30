@@ -1,0 +1,28 @@
+.login-logo {
+  position:relative;
+  float:left;
+  .login-logo-sphere {
+    border-radius: 50%;
+    min-height: 100px;
+    height: 100px;
+    min-width: 100px;
+    width: 100px;
+    background-image: linear-gradient(to bottom right, rgb(255, 234, 0), #ff4000);
+    &.login-sphere-type1 {
+      position:relative;
+      top: 10px;
+      left:100px;
+    }
+  
+    &.login-sphere-type2 {
+      position:relative;
+      top: 10px;
+      left:300px;
+    }
+  
+    &.login-sphere-type3 {
+      position:relative;
+      left:150px;
+    }
+  }
+}
