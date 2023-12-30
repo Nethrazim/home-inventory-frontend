@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'hio-subscribe',
-  templateUrl: './subcribe.component.html',
-  styleUrl: './subcribe.component.scss',
+  templateUrl: './subscribe.component.html',
+  styleUrl: './subscribe.component.scss',
 })
 export class SubscribeComponent {}
