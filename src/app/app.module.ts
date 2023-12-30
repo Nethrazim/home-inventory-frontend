@@ -7,6 +7,7 @@ import { HomePageComponent } from './welcome/home-inventory-welcome.component';
 
 import { SharedModule } from '@home-inventory-fe/shared';
 import { appRoutes } from './app.routes';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { appRoutes } from './app.routes';
   ],
   imports: [
     BrowserModule, 
+    BrowserAnimationsModule,
     CommonModule,
     RouterModule.forRoot(appRoutes),
     SharedModule,

@@ -5,16 +5,19 @@ import { identityRoutes } from './identity.routes';
 import { RouterModule } from '@angular/router';
 import { LoginWrapperComponent } from './components/login-wrapper/login-wrapper.component';
 import { SharedModule } from '@home-inventory-fe/shared';
+import { SubscribeWrapperComponent } from './components/subscribe-wrapper/subscribe-wrapper.component';
+import { SubscribeComponent } from './components/subscribe/subscribe.component';
 
 @NgModule({
   declarations: [
-    LoginComponent, 
-    LoginWrapperComponent
+    LoginComponent,
+    LoginWrapperComponent,
+    SubscribeComponent,
+    SubscribeWrapperComponent,
   ],
   imports: [
     CommonModule, 
-    RouterModule.forChild(identityRoutes),
-    SharedModule
-    ],
+    RouterModule.forChild(identityRoutes), 
+    SharedModule],
 })
 export class IdentityModule {}
