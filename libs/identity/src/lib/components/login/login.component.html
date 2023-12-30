@@ -1,12 +1,20 @@
 <div class="login-wrapper">
   <div class="login-grid">
     <div class="login-content">
-      <label>Email: </label>
-      <input type="text"/>
-      <label>Password: </label>
-      <input type="password"/>
-      <button mat-raised-button>Login</button>
-      <span style="display:flex; justify-content: center;">or</span> 
-      <a [routerLink]="'/identity/subscribe'"><span>Subscribe</span></a>
+      <form [formGroup]="loginForm">
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Enter your email" autocomplete="off" formControlName="email">
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Enter your password" autocomplete="off" formControlName="password">
+        </mat-form-field>
+
+        <button mat-raised-button (click)="onLogin()">Login</button>
+        <span style="display:flex; justify-content: center;">or</span> 
+        <a [routerLink]="'/'"><span>Back to Home Page</span></a>
+    </form>
     </div>
 </div>

@@ -9,16 +9,20 @@
   .login-content
   {
     position:relative;
-    width: 200px;
     margin:auto;
-    padding-top: 10px;
-    >* {
+    padding-top: 50px;
+    mat-form-field, a, button {
       display:block;
-      width: 200px;
+      width: 300px;
       margin-bottom: 1rem;
     }
-    >a {
+    a {
       display: flex;
+      justify-content: center;
+    }
+
+    form {
+      display:block;
       justify-content: center;
     }
   }

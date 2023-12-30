@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@home-inventory-fe/backend-library": [
+        "libs/backend-library/src/index.ts"
+      ],
       "@home-inventory-fe/identity": ["libs/identity/src/index.ts"],
       "@home-inventory-fe/material": ["libs/mat-module/index.ts"],
       "@home-inventory-fe/shared": ["libs/shared/src/index.ts"]
