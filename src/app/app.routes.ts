@@ -18,5 +18,12 @@ export const appRoutes: Route[] = [
       import('@home-inventory-fe/identity').then(
         (module) => module.IdentityModule
       )
+  },
+  {
+    path: 'home', 
+    loadChildren: () => 
+      import('@home-inventory-fe/feature-home').then(
+        (module) => module.FeatureHomeModule
+      )
   }
 ];

@@ -1,0 +1,28 @@
+<mat-card class="side-nav-menu-card">
+  <mat-card-header>
+    <div style="padding-left:10px; font-size: 22px;border-bottom: 1px solid black; width: 100%;padding-bottom: 10px;">
+      <span>Menu</span>
+    </div>    
+  </mat-card-header>
+  <mat-card-content>
+    <div class="side-nav-menu">
+      <ul>
+        <li>
+          <div [routerLink]="'stock'" (click)="onLinkClicked(0)" [ngClass]="{'active-state' : activeState[0] == true}">
+            <mat-icon>home</mat-icon>&nbsp;<span>Home Stock</span>
+          </div>
+        </li>
+        <li>
+          <div [routerLink]="'spendings'" (click)="onLinkClicked(1)" [ngClass]="{'active-state' : activeState[1] == true}">
+            <mat-icon>attach_money</mat-icon>&nbsp;<span>Spendings</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </mat-card-content>
+  <mat-card-footer>
+    <div>
+      <span>asd</span>
+    </div>
+  </mat-card-footer>
+</mat-card>
