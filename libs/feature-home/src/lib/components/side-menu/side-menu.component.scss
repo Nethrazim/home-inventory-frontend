@@ -27,7 +27,9 @@
           color:white;
           background-color: blue;
           border-radius: 4px;
-          
+          mat-icon {
+            color: white;
+          }
         }
       }
     }
