@@ -20,10 +20,14 @@
       padding: 5px;
       div {
         padding: 3px;
+        mat-icon {
+          color: #5998FF;
+        }
         &.active-state {
           color:white;
           background-color: blue;
           border-radius: 4px;
+          
         }
       }
     }
@@ -34,11 +38,25 @@
       div {
         background-color: blue;
         border-radius: 4px;
+        mat-icon {
+          color: #FFF;
+        }
       }
     }
   }
   mat-card-footer {
+    width: 200px;
     position:fixed;
     bottom:0px;
+    background-color: black;
+    .user-menu {
+      width: 100%;
+      display:flex; 
+      justify-content:center;
+      padding: 10px; 
+      mat-icon {
+        color: white;
+      }
+    }
   }
 }
