@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { IGlobalState } from './store/global.reducer';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { selectUserId } from './store/global.selectors';
 
 @Component({
   selector: 'hio-root',
@@ -14,5 +15,7 @@ export class AppComponent {
   userId$! : Observable<number>;
   constructor(private store: Store<IGlobalState>){}
 
-  
+  ngOnInit() {
+    this.userId$ = this.store.select(selectUserId);
+  }
 }

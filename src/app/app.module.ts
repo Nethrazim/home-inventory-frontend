@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { StoreModule, provideStore } from '@ngrx/store';
+import { StoreModule, provideState, provideStore } from '@ngrx/store';
 
 import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
@@ -12,7 +12,7 @@ import { appRoutes } from './app.routes';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BASE_PATH } from '@home-inventory-fe/backend-library';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { globalReducer, globalStateFeatureKey } from './store/global.reducer';
+import { globalFeature, globalStateFeatureKey } from './store/global.reducer';
 import { StoreDevtoolsModule, provideStoreDevtools } from '@ngrx/store-devtools';
 
 @NgModule({
@@ -27,7 +27,7 @@ import { StoreDevtoolsModule, provideStoreDevtools } from '@ngrx/store-devtools'
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    StoreModule.forRoot(globalReducer),
+    StoreModule.forRoot(globalFeature.reducer),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       logOnly: false
@@ -35,6 +35,6 @@ import { StoreDevtoolsModule, provideStoreDevtools } from '@ngrx/store-devtools'
     SharedModule,
   ],
   bootstrap: [AppComponent],
-  providers:[{ provide: BASE_PATH, useValue: 'https://localhost:7195' }, provideStore(), provideStoreDevtools()]
+  providers:[{ provide: BASE_PATH, useValue: 'https://localhost:7195' }, provideStore(), provideStoreDevtools(), provideState(globalFeature)]
 })
 export class AppModule { }
