@@ -4,4 +4,4 @@ export * from './variables';
 export * from './configuration';
 export * from './api.module';
 export * from './param';
-export * from '../api-responses';
+export * from '../api-responses/index';

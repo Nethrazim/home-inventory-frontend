@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { IGlobalState } from './store/global.reducer';
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'hio-root',
@@ -7,4 +10,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'home-inventory-fe';
+
+  userId$! : Observable<number>;
+  constructor(private store: Store<IGlobalState>){}
+
+  
 }

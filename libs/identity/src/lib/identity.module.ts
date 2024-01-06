@@ -10,6 +10,7 @@ import { SubscribeComponent } from './components/subscribe/subscribe.component';
 import { AccountService } from '@home-inventory-fe/backend-library';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { StoreModule } from '@ngrx/store';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [
     HttpClient,
-    AccountService
+    AccountService,
+    StoreModule
   ]
 })
 export class IdentityModule {}

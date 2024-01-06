@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountService, AuthenticateRequest, AuthenticateResponse } from '@home-inventory-fe/backend-library';
+import { Store } from '@ngrx/store';
 import { catchError, of } from 'rxjs';
-
+import { globalActionsGroup } from '../../../../../../src/app/store/global.actions';
 @Component({
   selector: 'hio-login',
   templateUrl: './login.component.html',
@@ -16,7 +17,7 @@ export class LoginComponent{
     password: new FormControl('')
   });
 
-  constructor(private accountService: AccountService, private router: Router) {}
+  constructor(private accountService: AccountService, private router: Router, private store: Store) {}
 
 
   onLogin()
@@ -28,11 +29,11 @@ export class LoginComponent{
         return of(err);
       })
     ).subscribe((data: AuthenticateResponse) => {
-      console.log(data.entity?.value);
-      if(data.entity?.value) {
+      console.log(data.entity);
+      if(data.entity) {
+        this.store.dispatch(globalActionsGroup.loginSuccess({userId: data.entity?.id}));
         this.router.navigate(['home']);
       }
     });
   }
-
 }
